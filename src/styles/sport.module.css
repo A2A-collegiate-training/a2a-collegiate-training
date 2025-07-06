@@ -1,0 +1,19 @@
+
+
+.page {
+    padding: 2rem;
+    padding-top: 120px; /* makes sure content starts below navbar */
+  }
+  
+  .title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  
+  .description {
+    margin-top: 1rem;
+    font-size: 1.125rem; /* text-lg */
+    color: #4B5563; /* gray-700 */
+  }
+  
