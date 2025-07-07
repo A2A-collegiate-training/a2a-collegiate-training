@@ -5,15 +5,16 @@ export function middleware(request: NextRequest) {
   const authHeader = request.headers.get('authorization')
 
   if (authHeader) {
-    const base64 = authHeader.split(' ')[1]
-    const [user, pass] = atob(base64).split(':')
-
-    if (user === 'admin' && pass === 'secret123') {
-      return NextResponse.next()
+    const [scheme, encoded] = authHeader.split(' ')
+    if (scheme === 'Basic') {
+      const [user, pass] = atob(encoded).split(':')
+      if (user === 'admin' && pass === 'secret123') {
+        return NextResponse.next()
+      }
     }
   }
 
-  return new Response('Authentication required', {
+  return new Response('Authentication Required', {
     status: 401,
     headers: {
       'WWW-Authenticate': 'Basic realm="Secure Area"',
@@ -22,5 +23,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|favicon.ico).*)'],
+  matcher: ['/((?!_next|favicon.ico).*)'], // protects all pages
 }
