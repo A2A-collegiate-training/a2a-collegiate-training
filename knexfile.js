@@ -25,13 +25,12 @@ module.exports = {
   },
 
   development: {
-    ...defaultSettings,
-    client: "sqlite3",
-    connection: {
-      filename: "./simplepedia.db",
-    },
-    useNullAsDefault: true,
-  },
+  ...defaultSettings,
+  client: "pg",
+  connection: {
+    connectionString: DATABASE_URL,
+  }
+},
 
   production: {
     ...defaultSettings,
