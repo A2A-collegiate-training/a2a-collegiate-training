@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "first_name": "William",
+    "last_name": "Zambito ",
+    "email": "wzambito@middlebury.edu",
+    "sport": "football"
+  },
+  {
+    "id": 2,
+    "first_name": "Jackson",
+    "last_name": "Stone ",
+    "email": "jstone@middlebury.edu",
+    "sport": "soccer"
+  }
+]
