@@ -25,16 +25,21 @@ export default function Navbar() {
           Our Team
         </button>
         <button
-          onClick={() => router.push('/about')}
+          onClick={() => router.push('/mission')}
           className={styles.about_button}
         >
-          Who We Are
+          Our Mission
         </button>
         <div
           className={styles.profile}
-          onClick={() => router.push('/profile')}
+          onClick={() => router.push('/ProfilePage')}
         >
-          Profile 
+               <img
+        src="/loginLight.png"
+        alt="Profile"
+        style={{ width: '30px', height: '30px', cursor: 'pointer', borderRadius: '50%' }}
+      />
+
         </div>
       </div>
     </nav>

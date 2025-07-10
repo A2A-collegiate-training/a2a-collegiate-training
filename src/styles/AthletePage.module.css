@@ -1,0 +1,93 @@
+.page {
+    padding-top: 120px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4B5563;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+  }
+  
+  .profileContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .profileImage {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bio {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #374151;
+  }
+  
+  .contentSection {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .contentTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .contentText {
+    font-size: 1rem;
+    color: #4B5563;
+  }
+  .videoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .videoCard {
+    background-color: #f9fafb; /* Light gray */
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+  }
+  
+  .videoCard:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .videoTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #374151;
+  }
+  
