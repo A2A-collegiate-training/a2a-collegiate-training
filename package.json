@@ -13,6 +13,9 @@
     "dev": "node ./dev-runner.js next dev"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.2.0",
     "knex": "^3.1.0",
     "module-alias": "^2.2.3",
     "next": "15.3.4",

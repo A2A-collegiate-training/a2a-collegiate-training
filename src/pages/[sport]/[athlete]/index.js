@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
-import styles from '../../styles/AthletePage.module.css';
+import styles from '../../../styles/AthletePage.module.css';
+import VideoCarousel from '../../../components/VideoCarousel';
 
 export default function AthleteProfile() {
   const router = useRouter();
@@ -8,7 +9,9 @@ export default function AthleteProfile() {
   const name = athlete?.replace(/-/g, ' ');
   const imgSrc = `/${athlete}.jpg`;
 
-  // 🔹 Mock video titles only
+  // Mock: only these athletes offer subscriptions
+  const offersSubscription = ['brady'].includes(athlete);
+
   const mockVideos = [
     { title: 'Video 1' },
     { title: 'Video 2' },
@@ -24,21 +27,23 @@ export default function AthleteProfile() {
 
       <div className={styles.profileContainer}>
         <img src={imgSrc} alt={name} className={styles.profileImage} />
-        <p className={styles.bio}>
-         Hello everyone, I am Tom Brady currently retired........
-        </p>
+        <div className={styles.profileText}>
+          <p className={styles.bio}>
+            Hello everyone, I am {name}. Currently retired...
+          </p>
+
+          {offersSubscription && (
+            <div className={styles.subscription}>
+              <p>Subscribe to get access to exclusive chat and premium content.</p>
+              <button className={styles.subscribeButton}>Subscribe Now</button> 
+            </div>
+          )}
+        </div>
       </div>
 
       <div className={styles.contentSection}>
         <h2 className={styles.contentTitle}>Athlete Content</h2>
-        <div className={styles.videoGrid}>
-          {mockVideos.map((video, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-            <div key={index} className={styles.videoCard}>
-              <p className={styles.videoTitle}>{video.title}</p>
-            </div>
-          ))}
-        </div>
+        <VideoCarousel videos={mockVideos} />
       </div>
     </div>
   );
