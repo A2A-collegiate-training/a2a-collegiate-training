@@ -1,6 +1,13 @@
 [
   {
+    "id": 1,
+    "sport": "Soccer",
+    "athlete_id": 3,
+    "title": "Test Video",
+    "description": "Test description for test video",
     "video_url": "https://youtube.com/shorts/B1BD2xgOwK0",
-    "athlete_id": 1
+    "price": 5.50,
+    "active": true,
+    "created_at": "2025-07-31 18:27:45.123456"
   }
 ]
