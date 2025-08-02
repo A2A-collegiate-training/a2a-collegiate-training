@@ -5,9 +5,14 @@
 exports.up = function (knex) {
   return knex.schema.createTable("User", (table) => {
     table.increments("id").primary();
+    table.integer("google_id");
     table.string("first_name");
     table.string("last_name");
     table.text("email");
+    table.boolean("athlete");
+    table.string("sport");
+    table.string("position");
+    table.boolean("subscription");
   });
 };
 

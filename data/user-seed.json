@@ -3,12 +3,19 @@
     "id": 3,
     "first_name": "User",
     "last_name": "One ",
-    "email": "user1@gmail.com"
+    "email": "user1@gmail.com",
+    "athlete": true,
+    "sport": "Soccer",
+    "position": "Center back",
+    "subscription": true
   },
   {
     "id": 4,
     "first_name": "User",
     "last_name": "Two ",
-    "email": "user2@gmail.com"
+    "email": "user2@gmail.com",
+    "athlete": false,
+    "sport": "Football",
+    "position": "Center"
   }
 ]

@@ -3,14 +3,10 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable("Video", (table) => {
+  return knex.schema.createTable("Subscription_Plan", (table) => {
     table.increments("id").primary();
-    table.string("sport");
-    table.integer("athlete_id").unsigned().references("id").inTable("User").onDelete("CASCADE");
-    table.string("title");
+    table.integer("athlete_id").references("id").inTable("User").onDelete("CASCADE");
     table.text("description");
-    table.string("video_url");
-    //store a thumbnail?
     table.double("price");
     table.boolean("active");
     table.timestamp("created_at");
@@ -22,5 +18,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  return knex.schema.dropTableIfExists("Video");
+  return knex.schema.dropTableIfExists("Subscription_Plan");
 };
