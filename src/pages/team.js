@@ -17,7 +17,7 @@ export default function Team() {
     {
       name: 'Tony Wang',
       role: 'Co-Founder, A2A',
-      bio: 'Tony, also on the Middlebury Football Team, combines athletic discipline with entrepreneurial drive to help scale A2A.',
+      bio: 'Hi everyone, my name is Tony. I am a varsity athlete in football and track at Middlebury College. Growing up, I have seen firsthand the differences across socio-economic classes. My goal in life is to bridge those gaps and help everyone unlock their full potential, without the burden of high costs. For everyone to be given the chance to be the best they can be, without being hindered due to things not in their control. Thank you for visiting!',
       image: '/Tony.jpg',
     },
   ];

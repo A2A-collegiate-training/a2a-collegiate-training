@@ -1,0 +1,19 @@
+.carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .videoCard {
+    background-color: #f5f5f5;
+    padding: 12px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .videoTitle {
+    font-weight: bold;
+  }
+  
